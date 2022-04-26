@@ -40,7 +40,7 @@ contract OpenDAO {
         require(
             IERC20(DAOTokenMockAddrss).balanceOf(msg.sender) >
                 10000000000000000000000,
-            "Sender Does not enough Have AT!"
+            "Sender Does not enough Have Tokens!"
         );
         require(Preposals[_id].created == false, "Preposal ID already taken");
 
@@ -60,7 +60,7 @@ contract OpenDAO {
         );
         require(
             IERC20(DAOTokenMockAddrss).balanceOf(msg.sender) > 0,
-            "Sender Does not Have AT!"
+            "Sender Does not Have Tokens!"
         );
         require(Preposals[_id].created == true, "Invaild Preposal Id");
         require(Preposals[_id].completed == false, "Preposal is completed");
